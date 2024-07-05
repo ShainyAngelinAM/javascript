@@ -6,6 +6,7 @@ console.log(course.length)
 let d=[1,2,3,"hello",567]
 const c=d.toString()
 console.log(c)
+console.log(c.split(','))
 
 //array join
 console.log(course.join('|'))
