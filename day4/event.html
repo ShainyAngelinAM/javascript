@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--dblclick event-->
+    <button ondblclick="fun()">double click</button>
+    <p id="text1"></p> 
+    <p id="text2"></p> 
+    <script>
+        function fun(){
+            document.getElementById("text1").innerHTML="good morning"
+            document.getElementById("text2").innerHTML="have a nice day"
+        }
+    </script>
+    <!--dblclick event-->
+
+    <!--onchange event-->
+    <br></br>
+    <br><label for="country">Select a country:</label>
+   <select id="country" onchange="handleChange()">
+      <option value="USA">USA</option>
+      <option value="Canada">Canada</option>
+      <option value="UK">UK</option>
+      <option value="India">India</option>
+   </select>
+   <p id="txt"></p>
+   <script>
+      function handleChange() {
+         var selectedCountry = document.getElementById('country').value;
+         document.getElementById("txt").textContent=
+		 "Selected country: "+selectedCountry;
+     }
+   </script>
+   <!--onchange event-->
+
+   <!--onclick event-->
+   <br></br>
+   <h1>welcome</h1> 
+   <button onclick="myfun()">click me</button>
+   <p id="text"></p>
+   <script>
+    function myfun(){
+        document.getElementById("text").innerHTML="good morning"
+    }
+   </script>
+   <!--onclick event-->
+
+   <!--onkey event-->
+   <br></br>
+   name:<input type="text" id="n1" onkeydown="key()"/>
+   <p id="demo">
+   </p>
+   <script>
+       function key(){
+           var name = document.getElementById("n1").value;
+           document.getElementById("demo").innerHTML = "user entering details  "  +name;
+         
+       }
+   </script>
+   <!--onkey event-->
+
+   <!--onload event-->
+   <br></br>
+   <body onload="alert('page loaded')">
+    <p> hello hii good morning</p>
+    </body>
+    <!--onload event-->
+
+    <!--mouseover and mouseout event-->
+    <br></br>
+    <h2 onmouseover="this.style.color='red'" onmouseout="this.style.color='blue'">
+        Testing</h2>  
+    <!--mouseover and mouseout event-->
+</body>
+</html>
