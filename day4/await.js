@@ -1,20 +1,20 @@
 async function myfun(){
-    let myPro = new Promise(function(myResolve, myReject) {
+    let myPro = new Promise(function(res, rej) {
         let a=10; 
         let b=6;
         if (a<b) {
-          myResolve("Operation was successful!"); 
+          res("Operation was successful!"); 
         } else {
-          myReject("There was an error."); 
+          rej("There was an error."); 
         }
-      });
-    
-    try {
+      });   
+        try {
         var result = await myPro;
-        console.log(result);
-    } catch (error) {
-        console.log(error);
-    }
+              console.log(result); 
+            }
+            catch(error) {
+              console.error(error); 
+            }
 
     return "hello";
 
