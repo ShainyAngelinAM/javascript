@@ -1,9 +1,9 @@
 async function myfun(){
     return"hello"
-     return Promise.resolve("hiiiii")
 }
  function myfuns(){
      return Promise.reject("hiiiii")
+}
 }
 myfun().then(
     function(value) {
