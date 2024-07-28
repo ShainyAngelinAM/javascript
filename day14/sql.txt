@@ -1,0 +1,75 @@
+create table students (
+	stud_id int,
+	first_name varchar,
+	last_name varchar,
+	age int,
+	email varchar
+);
+
+insert into students
+values(101,'shibi','john',20,'shibi@gmail.com');
+
+insert into students(stud_id,first_name,last_name,age,email)
+values(102,'mary','grace',25,'mary@gmail.com');
+
+insert into students
+values(103,'shainy','angelin',20,'shainy@gmail.com'),
+(104,'janis','rhea',20,'rhea@gmail.com'),
+(105,'priya','raji',23,'priya@gmail.com');
+
+select first_name from students;
+
+select first_name,last_name from student;
+
+select * from students;
+
+select distinct age from students;
+
+select distinct age,email from students;
+
+select distinct * from students;
+
+select age from students where age>20;
+
+select age,email from student where age>20;
+
+select * from student where first_name='shainy';
+
+select * from student;
+
+select age,email from student where age>20 and age<25;
+
+select age,email from student where age>20 and age<25 or first_name='shibi';
+
+select first_name,age,email from student where not age=25;
+
+select first_name,age,email from student where not age=25 and not age=20;
+
+select * from students;
+
+update students
+set age=24
+where stud_id=104;
+
+update student 
+set age=22;
+
+delete from students
+where stud_id=101;
+
+delete from student 
+where age=20;
+
+delete from student;
+
+truncate students;
+
+alter table students add pass_word varchar;
+
+alter table students drop pass_word;
+
+alter table student rename column email to email_id ;
+
+alter table student alter column age type varchar ;
+
+    
