@@ -48,16 +48,10 @@ const LeaveHistory = () => {
       key: 'endDate',
       sorter: (a, b) => new Date(a.endDate) - new Date(b.endDate),
     },
-    {
-      title: 'Status',
-      dataIndex: 'status',
-      key: 'status',
-      render: (text) => (text ? text.charAt(0).toUpperCase() + text.slice(1) : 'Pending'),
-    },
   ];
 
   const handleBack = () => {
-    navigate('/employee'); // Replace '/dashboard' with the correct route to the employee dashboard
+    navigate('/employee'); 
   };
 
   return (
