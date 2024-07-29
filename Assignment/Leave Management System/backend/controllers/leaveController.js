@@ -90,6 +90,7 @@ exports.getUserLeaveHistory = async (req, res) => {
     const leaveHistory = await dbleave.findAll({
       where: {
         username: username, 
+        status:'approved',
       },
     });
     return res.status(200).json(leaveHistory);
@@ -98,6 +99,3 @@ exports.getUserLeaveHistory = async (req, res) => {
     return res.status(500).json({ message: 'Internal server error' });
   }
 };
-
-
-
