@@ -54,7 +54,7 @@ exports.getLeaveBalance = async (req, res) => {
       where: { role: 'employee' }, 
     });
     const balances = await Promise.all(users.map(async (user) => {
-      const leaveRequests = await dbleave.findAll({ where: { username: user.username } });
+      const leaveRequests = await dbleave.findAll({ where: { username: user.username,status:'approved' } });
       const leaveTaken = leaveRequests.length;
       const leaveBalance = 12 - leaveTaken; 
       return {
